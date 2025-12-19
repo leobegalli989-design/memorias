@@ -73,6 +73,7 @@
 </head>
 <body class="min-h-screen">
 
+    <!-- Camadas de Fundo -->
     <div id="star-field" class="fixed inset-0 pointer-events-none z-0"></div>
     <div id="star-rain" class="fixed inset-0 pointer-events-none z-0"></div>
 
@@ -87,9 +88,16 @@
             <p class="text-slate-400 text-sm mb-8 uppercase tracking-widest">Identifique-se para entrar</p>
             
             <form id="login-form" class="space-y-4">
-                <input type="email" id="login-email" placeholder="E-mail" class="w-full p-4 rounded-2xl input-dark text-center font-medium" required>
-                <input type="password" id="login-pass" placeholder="Senha" class="w-full p-4 rounded-2xl input-dark text-center font-medium" required>
-                <div class="flex flex-col gap-3 pt-4">
+                <input type="email" id="login-email" placeholder="E-mail" class="w-full p-4 rounded-2xl input-dark text-center font-medium" autocomplete="username" required>
+                <input type="password" id="login-pass" placeholder="Senha" class="w-full p-4 rounded-2xl input-dark text-center font-medium" autocomplete="current-password" required>
+                
+                <!-- Opção de Salvar Login -->
+                <div class="flex items-center justify-center gap-3 py-2">
+                    <input type="checkbox" id="login-remember" class="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 bg-slate-800">
+                    <label for="login-remember" class="text-xs text-slate-400 cursor-pointer select-none">Lembrar o meu e-mail</label>
+                </div>
+
+                <div class="flex flex-col gap-3 pt-2">
                     <button type="submit" id="btn-login" class="w-full py-4 bg-white text-black font-black rounded-2xl uppercase tracking-tighter hover:scale-105 transition-all">Entrar</button>
                 </div>
             </form>
@@ -222,7 +230,7 @@
     <!-- FIREBASE SDKS -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
-        import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+        import { getAuth, setPersistence, browserLocalPersistence, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
         import { getFirestore, doc, setDoc, collection, onSnapshot, addDoc, deleteDoc, query, orderBy } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";
 
         const firebaseConfig = {
@@ -245,17 +253,44 @@
         let memories = [];
         let stats = { A: { photos: 0, kisses: 0 }, B: { photos: 0, kisses: 0 } };
 
+        // --- LOGIN STORAGE LOGIC ---
+        const loginEmailInput = document.getElementById('login-email');
+        const loginRememberCheckbox = document.getElementById('login-remember');
+
+        // Check for saved email on start
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedEmail = localStorage.getItem('lunar_saved_email');
+            if (savedEmail) {
+                loginEmailInput.value = savedEmail;
+                loginRememberCheckbox.checked = true;
+            }
+        });
+
         // --- AUTH LOGIC ---
         const loginForm = document.getElementById('login-form');
         const authError = document.getElementById('auth-error');
 
         loginForm.onsubmit = async (e) => {
             e.preventDefault();
-            const email = document.getElementById('login-email').value;
+            const email = loginEmailInput.value;
             const pass = document.getElementById('login-pass').value;
+            const remember = loginRememberCheckbox.checked;
+
             authError.classList.add('hidden');
+            
             try {
+                // Ensure session persistence is LOCAL (persists even after browser closing)
+                await setPersistence(auth, browserLocalPersistence);
+                
                 await signInWithEmailAndPassword(auth, email, pass);
+
+                // Handle "Remember Email"
+                if (remember) {
+                    localStorage.setItem('lunar_saved_email', email);
+                } else {
+                    localStorage.removeItem('lunar_saved_email');
+                }
+
             } catch (err) {
                 authError.innerText = "Credenciais inválidas. Tente novamente.";
                 authError.classList.remove('hidden');
