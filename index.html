@@ -73,7 +73,6 @@
 </head>
 <body class="min-h-screen">
 
-    <!-- Camadas de Fundo -->
     <div id="star-field" class="fixed inset-0 pointer-events-none z-0"></div>
     <div id="star-rain" class="fixed inset-0 pointer-events-none z-0"></div>
 
@@ -84,17 +83,16 @@
                 <i class="fa-solid fa-moon text-white text-4xl moon-icon"></i>
                 <i class="fa-solid fa-sun text-yellow-400 text-4xl sun-icon"></i>
             </div>
-            <h2 class="text-3xl font-serif text-white mb-2">Nosso Universo</h2>
-            <p class="text-slate-400 text-sm mb-8 uppercase tracking-widest">Identifique-se para entrar</p>
+            <h2 class="text-3xl font-serif text-white mb-2 font-black tracking-tight">Nosso Universo</h2>
+            <p class="text-slate-400 text-sm mb-8 uppercase tracking-widest font-bold">Identifique-se para entrar</p>
             
             <form id="login-form" class="space-y-4">
                 <input type="email" id="login-email" placeholder="E-mail" class="w-full p-4 rounded-2xl input-dark text-center font-medium" autocomplete="username" required>
                 <input type="password" id="login-pass" placeholder="Senha" class="w-full p-4 rounded-2xl input-dark text-center font-medium" autocomplete="current-password" required>
                 
-                <!-- Opção de Salvar Login -->
                 <div class="flex items-center justify-center gap-3 py-2">
                     <input type="checkbox" id="login-remember" class="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 bg-slate-800">
-                    <label for="login-remember" class="text-xs text-slate-400 cursor-pointer select-none">Lembrar o meu e-mail</label>
+                    <label for="login-remember" class="text-xs text-slate-400 cursor-pointer select-none font-bold">Lembrar o meu e-mail</label>
                 </div>
 
                 <div class="flex flex-col gap-3 pt-2">
@@ -114,7 +112,7 @@
                 <div id="popup-icon-container" class="mb-8 flex justify-center"></div>
                 <h2 id="popup-title" class="text-3xl md:text-5xl font-serif mb-6 text-white leading-tight"></h2>
                 <p id="popup-subtitle" class="text-xl md:text-2xl text-slate-300 italic mb-10"></p>
-                <button onclick="closePopup()" class="px-10 py-4 bg-white text-black font-black rounded-full uppercase tracking-widest hover:scale-110 transition-transform">Continuar Amando</button>
+                <button onclick="closePopup()" class="px-10 py-4 bg-white text-black font-black rounded-full uppercase tracking-widest hover:scale-110 transition-transform font-bold">Continuar Amando</button>
             </div>
         </div>
 
@@ -127,9 +125,9 @@
                 <div class="text-center mb-16">
                     <div id="modal-icon" class="mb-4 flex justify-center text-6xl"></div>
                     <h2 id="modal-title" class="text-5xl md:text-7xl font-serif text-white mb-4"></h2>
-                    <p id="modal-subtitle" class="text-slate-400 uppercase tracking-widest text-sm"></p>
+                    <p id="modal-subtitle" class="text-slate-400 uppercase tracking-widest text-sm font-bold"></p>
                 </div>
-                <div id="modal-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                <div id="modal-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-20"></div>
             </div>
         </div>
 
@@ -142,11 +140,11 @@
             <div class="flex justify-center items-center gap-10 mb-8">
                 <div class="flex flex-col items-center">
                     <i class="fa-solid fa-moon text-slate-100 text-6xl moon-icon"></i>
-                    <span class="text-xs mt-2 uppercase tracking-widest text-slate-400 font-bold">Babi 🌙</span>
+                    <span class="text-xs mt-2 uppercase tracking-widest text-slate-400 font-bold font-serif">Babi 🌙</span>
                 </div>
                 <div class="flex flex-col items-center">
                     <i class="fa-solid fa-sun text-yellow-400 text-6xl sun-icon"></i>
-                    <span class="text-xs mt-2 uppercase tracking-widest text-yellow-600 font-bold">Léo ☀️</span>
+                    <span class="text-xs mt-2 uppercase tracking-widest text-yellow-600 font-bold font-serif">Léo ☀️</span>
                 </div>
             </div>
             <h1 class="text-6xl md:text-9xl font-serif mb-6 tracking-tighter">Babi 🌙 <span class="text-2xl opacity-20 italic">e</span> Léo ☀️</h1>
@@ -180,20 +178,20 @@
         <section class="container mx-auto px-4 mb-24 relative z-20">
             <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <div class="lunar-card p-10 rounded-[3rem] text-center border-t-2 border-slate-500/30 float-anim">
-                    <h3 class="text-3xl font-serif mb-4 text-white">Babi 🌙</h3>
+                    <h3 class="text-3xl font-serif mb-4 text-white font-serif font-black">Babi 🌙</h3>
                     <div class="mb-6 text-white">
                         <span id="scoreA-kisses" class="text-7xl font-black">0</span>
-                        <p class="text-[10px] uppercase tracking-widest text-slate-500 mt-2">Beijos Acumulados</p>
+                        <p class="text-[10px] uppercase tracking-widest text-slate-500 mt-2 font-bold">Beijos Acumulados</p>
                     </div>
-                    <button onclick="openGallery('A')" class="w-full py-4 rounded-2xl bg-white/10 border border-white/20 text-white font-bold hover:bg-white/20 transition-all uppercase text-[10px] tracking-[0.2em]">Ver Memórias 🌙</button>
+                    <button onclick="openGallery('A')" class="w-full py-4 rounded-2xl bg-white/10 border border-white/20 text-white font-black hover:bg-white/20 transition-all uppercase text-[10px] tracking-[0.2em]">Ver Memórias 🌙</button>
                 </div>
                 <div class="lunar-card p-10 rounded-[3rem] text-center border-t-2 border-yellow-500/30 float-anim" style="animation-delay: -1s;">
-                    <h3 class="text-3xl font-serif mb-4 text-white">Léo ☀️</h3>
+                    <h3 class="text-3xl font-serif mb-4 text-white font-serif font-black">Léo ☀️</h3>
                     <div class="mb-6 text-white">
                         <span id="scoreB-kisses" class="text-7xl font-black">0</span>
-                        <p class="text-[10px] uppercase tracking-widest text-slate-500 mt-2">Beijos Acumulados</p>
+                        <p class="text-[10px] uppercase tracking-widest text-slate-500 mt-2 font-bold">Beijos Acumulados</p>
                     </div>
-                    <button onclick="openGallery('B')" class="w-full py-4 rounded-2xl bg-yellow-400/10 border border-yellow-400/20 text-yellow-400 font-bold hover:bg-yellow-400/20 transition-all uppercase text-[10px] tracking-[0.2em]">Ver Memórias ☀️</button>
+                    <button onclick="openGallery('B')" class="w-full py-4 rounded-2xl bg-yellow-400/10 border border-yellow-400/20 text-yellow-400 font-black hover:bg-yellow-400/20 transition-all uppercase text-[10px] tracking-[0.2em]">Ver Memórias ☀️</button>
                 </div>
             </div>
         </section>
@@ -201,22 +199,22 @@
         <!-- Upload Form -->
         <section class="container mx-auto px-4 mb-40 max-w-xl relative z-20">
             <div class="lunar-card p-12 rounded-[3.5rem] border border-white/20 text-white">
-                <h2 class="text-3xl font-serif text-center mb-10">✨ Novas Estrelas 📸</h2>
+                <h2 class="text-3xl font-serif text-center mb-10 font-serif font-black">✨ Novas Estrelas 📸</h2>
                 <form id="upload-form" class="space-y-8">
                     <div class="grid grid-cols-2 gap-4">
-                        <button type="button" onclick="setUploader('A')" id="btnA" class="py-5 rounded-2xl border border-white/10 text-slate-500 font-bold transition-all hover:bg-white/5">Babi 🌙</button>
-                        <button type="button" onclick="setUploader('B')" id="btnB" class="py-5 rounded-2xl border border-white/10 text-slate-500 font-bold transition-all hover:bg-white/5">Léo ☀️</button>
+                        <button type="button" onclick="setUploader('A')" id="btnA" class="py-5 rounded-2xl border border-white/10 text-slate-500 font-black transition-all hover:bg-white/5 font-serif">Babi 🌙</button>
+                        <button type="button" onclick="setUploader('B')" id="btnB" class="py-5 rounded-2xl border border-white/10 text-slate-500 font-black transition-all hover:bg-white/5 font-serif">Léo ☀️</button>
                     </div>
                     <div class="relative group">
                         <input type="file" id="file-input" accept="image/*" class="hidden" onchange="handleFileSelect()">
                         <button type="button" onclick="document.getElementById('file-input').click()" class="w-full py-16 rounded-[2.5rem] border-2 border-dashed border-white/10 group-hover:border-white/30 transition-all flex flex-col items-center justify-center gap-4 bg-white/[0.02]">
                             <i class="fa-solid fa-camera-retro text-4xl text-slate-500"></i>
-                            <span id="file-label" class="text-slate-400 font-bold tracking-widest text-xs uppercase">Capturar Memória ✨</span>
+                            <span id="file-label" class="text-slate-400 font-black tracking-widest text-xs uppercase">Capturar Memória ✨</span>
                         </button>
                     </div>
-                    <textarea id="caption" placeholder="O que essa estrela representa hoje? ✨" rows="3" class="w-full p-6 rounded-2xl input-dark text-sm font-medium resize-none text-white" required></textarea>
+                    <textarea id="caption" placeholder="O que essa estrela representa hoje? ✨" rows="3" class="w-full p-6 rounded-2xl input-dark text-sm font-medium resize-none text-white font-serif" required></textarea>
                     <button type="submit" id="submit-btn" class="w-full py-6 rounded-2xl bg-white text-slate-950 font-black text-xl hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] transition-all uppercase tracking-tighter flex items-center justify-center gap-3">
-                        <i class="fa-solid fa-sparkles"></i> Eternizar Agora
+                        <i class="fa-solid fa-sparkles"></i> <span id="btn-text">Eternizar Agora</span>
                     </button>
                 </form>
             </div>
@@ -233,31 +231,31 @@
         import { getAuth, setPersistence, browserLocalPersistence, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
         import { getFirestore, doc, setDoc, collection, onSnapshot, addDoc, deleteDoc, query, orderBy } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";
 
+        // CONFIGURAÇÃO ATUALIZADA
         const firebaseConfig = {
-            apiKey: "AIzaSyAtg6ZEkHruBfbRcMfFw6qm123FCpfFa9Q",
-            authDomain: "memorias-4a85d.firebaseapp.com",
-            projectId: "memorias-4a85d",
-            storageBucket: "memorias-4a85d.firebasestorage.app",
-            messagingSenderId: "394687600004",
-            appId: "1:394687600004:web:cfe2b5c7dc507e4124f9d1",
-            measurementId: "G-NHBVMGCR8X"
+            apiKey: "AIzaSyAp2lSTUEFyeur_pJ2OSkRwNtTYFjLN7ZE",
+            authDomain: "love-gallery-2ed04.firebaseapp.com",
+            projectId: "love-gallery-2ed04",
+            storageBucket: "love-gallery-2ed04.firebasestorage.app",
+            messagingSenderId: "791823820774",
+            appId: "1:791823820774:web:155aa4e5ab7c7933041827"
         };
 
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
         const db = getFirestore(app);
-        const appId = "memorias-4a85d";
+        
+        // ID do Aplicativo para caminhos no Firestore
+        const appId = "love-gallery-2ed04";
 
         let currentUser = null;
         let activeUploader = null;
         let memories = [];
         let stats = { A: { photos: 0, kisses: 0 }, B: { photos: 0, kisses: 0 } };
 
-        // --- LOGIN STORAGE LOGIC ---
         const loginEmailInput = document.getElementById('login-email');
         const loginRememberCheckbox = document.getElementById('login-remember');
 
-        // Check for saved email on start
         window.addEventListener('DOMContentLoaded', () => {
             const savedEmail = localStorage.getItem('lunar_saved_email');
             if (savedEmail) {
@@ -266,7 +264,6 @@
             }
         });
 
-        // --- AUTH LOGIC ---
         const loginForm = document.getElementById('login-form');
         const authError = document.getElementById('auth-error');
 
@@ -275,24 +272,16 @@
             const email = loginEmailInput.value;
             const pass = document.getElementById('login-pass').value;
             const remember = loginRememberCheckbox.checked;
-
             authError.classList.add('hidden');
             
             try {
-                // Ensure session persistence is LOCAL (persists even after browser closing)
                 await setPersistence(auth, browserLocalPersistence);
-                
                 await signInWithEmailAndPassword(auth, email, pass);
-
-                // Handle "Remember Email"
-                if (remember) {
-                    localStorage.setItem('lunar_saved_email', email);
-                } else {
-                    localStorage.removeItem('lunar_saved_email');
-                }
-
+                if (remember) localStorage.setItem('lunar_saved_email', email);
+                else localStorage.removeItem('lunar_saved_email');
             } catch (err) {
-                authError.innerText = "Credenciais inválidas. Tente novamente.";
+                console.error("Login Error:", err);
+                authError.innerText = "Login falhou. Verifica se os dados estão certos no console do Firebase.";
                 authError.classList.remove('hidden');
             }
         };
@@ -314,17 +303,17 @@
             }
         });
 
-        // --- FIRESTORE LOGIC ---
         function initRealtimeData() {
-            const statsRef = doc(db, 'artifacts', appId, 'public', 'data', 'competition');
+            // Path: artifacts/{appId}/public/data/competition/current
+            const statsRef = doc(db, 'artifacts', appId, 'public', 'data', 'competition', 'current');
             onSnapshot(statsRef, (docSnap) => {
                 if (docSnap.exists()) {
                     stats = docSnap.data();
                     updatePlacarUI();
                 } else {
-                    setDoc(statsRef, stats);
+                    setDoc(statsRef, { A: { photos: 0, kisses: 0 }, B: { photos: 0, kisses: 0 } }).catch(e => console.error("Erro init stats:", e));
                 }
-            });
+            }, (err) => console.error("Firestore Stats Error:", err));
 
             const memRef = collection(db, 'artifacts', appId, 'public', 'data', 'memories');
             const qMem = query(memRef, orderBy('id', 'desc'));
@@ -334,45 +323,52 @@
                     const currentModalUser = document.getElementById('modal-title').innerText.includes('Babi') ? 'A' : 'B';
                     renderModalGrid(currentModalUser);
                 }
-            });
+            }, (err) => console.error("Firestore Memories Error:", err));
         }
 
-        // --- APP LOGIC ---
         window.setUploader = (type) => {
             activeUploader = type;
             const btnA = document.getElementById('btnA'), btnB = document.getElementById('btnB');
             if (type === 'A') {
-                btnA.className = "py-5 rounded-2xl bg-white text-black font-black shadow-xl scale-105 transition-all";
-                btnB.className = "py-5 rounded-2xl border border-white/10 text-slate-700 opacity-30 font-bold";
+                btnA.className = "py-5 rounded-2xl bg-white text-black font-black shadow-xl scale-105 transition-all font-serif";
+                btnB.className = "py-5 rounded-2xl border border-white/10 text-slate-700 opacity-30 font-black font-serif";
             } else {
-                btnB.className = "py-5 rounded-2xl bg-yellow-400 text-black font-black shadow-xl scale-105 transition-all";
-                btnA.className = "py-5 rounded-2xl border border-white/10 text-slate-700 opacity-30 font-bold";
+                btnB.className = "py-5 rounded-2xl bg-yellow-400 text-black font-black shadow-xl scale-105 transition-all font-serif";
+                btnA.className = "py-5 rounded-2xl border border-white/10 text-slate-700 opacity-30 font-black font-serif";
             }
         };
 
         window.handleFileSelect = () => {
             const label = document.getElementById('file-label');
-            label.innerText = "✓ Momento Selecionado ✨";
-            label.classList.add('text-white');
+            const fileInput = document.getElementById('file-input');
+            if (fileInput.files[0]) {
+                label.innerText = "✓ Ficheiro Selecionado ✨";
+                label.classList.add('text-white');
+            }
         };
 
         async function compressImage(file) {
-            return new Promise((resolve) => {
+            return new Promise((resolve, reject) => {
                 const reader = new FileReader();
                 reader.onload = (e) => {
                     const img = new Image();
+                    img.onerror = () => reject(new Error("Imagem inválida. Tenta outra."));
                     img.onload = () => {
-                        const canvas = document.createElement('canvas');
-                        const MAX_W = 400;
-                        let w = img.width, h = img.height;
-                        if (w > MAX_W) { h *= MAX_W / w; w = MAX_W; }
-                        canvas.width = w; canvas.height = h;
-                        const ctx = canvas.getContext('2d');
-                        ctx.drawImage(img, 0, 0, w, h);
-                        resolve(canvas.toDataURL('image/jpeg', 0.5));
+                        try {
+                            const canvas = document.createElement('canvas');
+                            const MAX_W = 450; 
+                            let w = img.width, h = img.height;
+                            if (w > MAX_W) { h *= MAX_W / w; w = MAX_W; }
+                            canvas.width = w; canvas.height = h;
+                            const ctx = canvas.getContext('2d');
+                            ctx.drawImage(img, 0, 0, w, h);
+                            const dataUrl = canvas.toDataURL('image/jpeg', 0.5);
+                            resolve(dataUrl);
+                        } catch (e) { reject(e); }
                     };
                     img.src = e.target.result;
                 };
+                reader.onerror = () => reject(new Error("Erro ao ler o ficheiro."));
                 reader.readAsDataURL(file);
             });
         }
@@ -380,34 +376,40 @@
         document.getElementById('upload-form').onsubmit = async (e) => {
             e.preventDefault();
             const btn = document.getElementById('submit-btn');
+            const btnText = document.getElementById('btn-text');
             const caption = document.getElementById('caption').value.trim();
             const fileInput = document.getElementById('file-input');
             const file = fileInput.files[0];
 
-            if (!activeUploader) return alert("Quem está enviando? 🌙☀️");
-            if (!file) return alert("Selecione uma foto! 📸");
+            if (!activeUploader) return alert("Escolhe quem és: Babi 🌙 ou Léo ☀️?");
+            if (!file) return alert("Tens de selecionar uma foto primeiro! 📸");
+            if (!currentUser) return alert("Sessão expirada. Por favor, faz login de novo.");
 
             const userType = activeUploader;
             btn.disabled = true;
-            btn.innerText = "Eternizando...";
+            btnText.innerText = "A Processar...";
 
             try {
                 const imgData = await compressImage(file);
+                btnText.innerText = "A Enviar para o Céu...";
+
                 const memory = {
                     id: Date.now(),
                     user: userType,
                     userName: userType === 'A' ? 'Babi' : 'Léo',
                     caption: caption,
                     image: imgData,
-                    date: new Date().toLocaleDateString('pt-BR')
+                    date: new Date().toLocaleDateString('pt-BR'),
+                    timestamp: new Date().getTime()
                 };
 
-                await addDoc(collection(db, 'artifacts', appId, 'public', 'data', 'memories'), memory);
+                const memRef = collection(db, 'artifacts', appId, 'public', 'data', 'memories');
+                await addDoc(memRef, memory);
                 
-                const statsRef = doc(db, 'artifacts', appId, 'public', 'data', 'competition');
+                const statsRef = doc(db, 'artifacts', appId, 'public', 'data', 'competition', 'current');
                 const newStats = { ...stats };
-                newStats[userType].photos++;
-                newStats[userType].kisses++;
+                newStats[userType].photos = (newStats[userType].photos || 0) + 1;
+                newStats[userType].kisses = (newStats[userType].kisses || 0) + 1;
                 await setDoc(statsRef, newStats);
 
                 confetti({ particleCount: 150, spread: 70, origin: { y: 0.8 }, colors: userType === 'A' ? ['#ffffff', '#94a3b8'] : ['#fde047', '#f97316'] });
@@ -419,18 +421,24 @@
                 document.getElementById('file-label').classList.remove('text-white');
                 activeUploader = null;
                 resetUploaderButtons();
-            } catch (err) { alert("Erro ao salvar: " + err.message); }
-            finally { btn.disabled = false; btn.innerText = "Eternizar Agora"; }
+
+            } catch (err) { 
+                console.error("Erro no Upload:", err);
+                alert("Erro ao guardar: " + err.message); 
+            } finally { 
+                btn.disabled = false; 
+                btnText.innerText = "Eternizar Agora"; 
+            }
         };
 
         function resetUploaderButtons() {
-            document.getElementById('btnA').className = "py-5 rounded-2xl border border-white/10 text-slate-500 font-bold transition-all hover:bg-white/5";
-            document.getElementById('btnB').className = "py-5 rounded-2xl border border-white/10 text-slate-500 font-bold transition-all hover:bg-white/5";
+            document.getElementById('btnA').className = "py-5 rounded-2xl border border-white/10 text-slate-500 font-black transition-all hover:bg-white/5 font-serif";
+            document.getElementById('btnB').className = "py-5 rounded-2xl border border-white/10 text-slate-500 font-black transition-all hover:bg-white/5 font-serif";
         }
 
         function updatePlacarUI() {
-            document.getElementById('scoreA-kisses').innerText = stats.A.kisses;
-            document.getElementById('scoreB-kisses').innerText = stats.B.kisses;
+            document.getElementById('scoreA-kisses').innerText = stats.A ? stats.A.kisses : 0;
+            document.getElementById('scoreB-kisses').innerText = stats.B ? stats.B.kisses : 0;
         }
 
         window.openGallery = (user) => {
@@ -438,10 +446,8 @@
             const title = document.getElementById('modal-title');
             const subtitle = document.getElementById('modal-subtitle');
             const icon = document.getElementById('modal-icon');
-
             if (user === 'A') { title.innerText = 'Babi 🌙'; subtitle.innerText = 'O Universo da Lua'; icon.innerHTML = '🌙'; }
             else { title.innerText = 'Léo ☀️'; subtitle.innerText = 'O Universo do Sol'; icon.innerHTML = '☀️'; }
-
             renderModalGrid(user);
             modal.classList.remove('hidden');
             setTimeout(() => modal.classList.replace('opacity-0', 'opacity-100'), 10);
@@ -451,12 +457,12 @@
         function renderModalGrid(user) {
             const grid = document.getElementById('modal-grid');
             grid.innerHTML = '';
-            const userMemories = memories.filter(m => m.user === user);
-
+            const userMemories = memories.filter(m => m.user === user).sort((a,b) => b.id - a.id);
+            
             if (userMemories.length === 0) {
-                grid.innerHTML = '<div class="col-span-full py-20 text-center text-slate-500 font-bold italic">Nenhuma estrela encontrada neste céu ainda...</div>';
+                grid.innerHTML = '<div class="col-span-full py-20 text-center text-slate-500 font-bold italic">Céu vazio... Envia uma foto para começar! 🌌</div>';
+                return;
             }
-
             userMemories.forEach(mem => {
                 const card = document.createElement('div');
                 card.className = "lunar-card rounded-[2.5rem] overflow-hidden group relative";
@@ -469,7 +475,7 @@
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                         <div class="absolute bottom-6 left-6 right-6">
                             <p class="text-white font-medium italic text-sm leading-tight">"${mem.caption}"</p>
-                            <span class="text-[9px] text-slate-400 uppercase tracking-widest mt-2 block">${mem.date}</span>
+                            <span class="text-[9px] text-slate-400 uppercase tracking-widest mt-2 block font-bold">${mem.date}</span>
                         </div>
                     </div>
                 `;
@@ -484,13 +490,13 @@
         };
 
         window.deleteMemory = async (fireId, userType) => {
-            if (!confirm("Deseja apagar essa memória? 🌌")) return;
+            if (!confirm("Queres mesmo apagar esta memória? 🌌")) return;
             try {
                 await deleteDoc(doc(db, 'artifacts', appId, 'public', 'data', 'memories', fireId));
-                const statsRef = doc(db, 'artifacts', appId, 'public', 'data', 'competition');
+                const statsRef = doc(db, 'artifacts', appId, 'public', 'data', 'competition', 'current');
                 const newStats = { ...stats };
-                newStats[userType].photos = Math.max(0, newStats[userType].photos - 1);
-                newStats[userType].kisses = Math.max(0, newStats[userType].kisses - 1);
+                newStats[userType].photos = Math.max(0, (newStats[userType].photos || 1) - 1);
+                newStats[userType].kisses = Math.max(0, (newStats[userType].kisses || 1) - 1);
                 await setDoc(statsRef, newStats);
             } catch (err) { alert("Erro ao deletar: " + err.message); }
         };
@@ -501,17 +507,16 @@
             const iconContainer = document.getElementById('popup-icon-container');
             const title = document.getElementById('popup-title');
             const subtitle = document.getElementById('popup-subtitle');
-
             content.classList.remove('glow-silver', 'glow-gold', 'border-white/50', 'border-yellow-400/50');
             if (user === 'A') {
                 iconContainer.innerHTML = '<i class="fa-solid fa-moon text-white text-8xl drop-shadow-[0_0_20px_rgba(255,255,255,0.8)]"></i>';
-                title.innerHTML = 'Babi 🌙, você acabou de ganhar um <span class="text-white font-black underline">beijinho</span> do Léo!';
-                subtitle.innerText = 'Sua memória foi eternizada sob a luz do luar. ✨';
+                title.innerHTML = 'Babi 🌙, acabaste de ganhar um <span class="text-white font-black underline">beijinho</span> do Léo!';
+                subtitle.innerText = 'A tua memória foi eternizada sob a luz do luar. ✨';
                 content.classList.add('glow-silver', 'border-white/50');
             } else {
                 iconContainer.innerHTML = '<i class="fa-solid fa-sun text-yellow-400 text-8xl drop-shadow-[0_0_20px_rgba(253,224,71,0.8)]"></i>';
-                title.innerHTML = 'Léo ☀️, você acabou de ganhar um <span class="text-yellow-400 font-black underline">beijinho</span> da Babi!';
-                subtitle.innerText = 'Seu registro está brilhando como o sol mais forte. ☀️';
+                title.innerHTML = 'Léo ☀️, acabaste de ganhar um <span class="text-yellow-400 font-black underline">beijinho</span> da Babi!';
+                subtitle.innerText = 'O teu registo está a brilhar como o sol mais forte. ☀️';
                 content.classList.add('glow-gold', 'border-yellow-400/50');
             }
             popup.classList.remove('hidden');
@@ -527,6 +532,7 @@
         function createStarLayers() {
             const field = document.getElementById('star-field');
             const rain = document.getElementById('star-rain');
+            field.innerHTML = ''; rain.innerHTML = '';
             for (let i = 0; i < 150; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
